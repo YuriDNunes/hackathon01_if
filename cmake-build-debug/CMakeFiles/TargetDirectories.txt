@@ -1,3 +1,0 @@
-/home/yuns/CLionProjects/hackthon/cmake-build-debug/CMakeFiles/hackthon.dir
-/home/yuns/CLionProjects/hackthon/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/yuns/CLionProjects/hackthon/cmake-build-debug/CMakeFiles/rebuild_cache.dir

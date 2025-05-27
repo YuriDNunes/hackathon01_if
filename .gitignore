@@ -1,5 +1,6 @@
 # CLion specific files
 .idea/
+CMakeLists.txt
 cmake-build-debug/
 cmake-build-release/
 
