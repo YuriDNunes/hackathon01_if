@@ -4,6 +4,14 @@
 
 using namespace std;
 
+void imprimirCabecalho(string cabecalho[]) {
+    for (int k = 0; k < 8; k++) {
+        printf("%10s", cabecalho[k].c_str());
+    }
+    printf("\n");
+}
+
+
 int main() {
 
     const int numBairros = 5;
@@ -37,13 +45,8 @@ int main() {
 
     printf("Temperatura (ºC):\n");
 
-    // Cabeçalho
-    for (int k = 0; k < 8; k++) {
-        printf("%10s", cabecalho[k].c_str());
-    }
-    printf("\n");
+    imprimirCabecalho(cabecalho);
 
-    // Corpo da tabela
     for (int i = 0; i < numBairros; i++) {
         printf("%7d", i + 1);
         for (int j = 0; j < numDias; j++) {
@@ -54,13 +57,8 @@ int main() {
 
     printf("Nível de poluição (ppm de CO₂):\n");
 
-    // Cabeçalho
-    for (int k = 0; k < 8; k++) {
-        printf("%10s", cabecalho[k].c_str());
-    }
-    printf("\n");
+    imprimirCabecalho(cabecalho);
 
-    // Corpo da tabela
     for (int i = 0; i < numBairros; i++) {
         printf("%8d", i + 1);
         for (int j = 0; j < numDias; j++) {
@@ -71,13 +69,8 @@ int main() {
 
     printf("Tráfego (em %%):\n");
 
-    // Cabeçalho
-    for (int k = 0; k < 8; k++) {
-        printf("%10s", cabecalho[k].c_str());
-    }
-    printf("\n");
+    imprimirCabecalho(cabecalho);
 
-    // Corpo da tabela
     for (int i = 0; i < numBairros; i++) {
         printf("%7d", i + 1);
         for (int j = 0; j < numDias; j++) {
@@ -86,19 +79,21 @@ int main() {
         printf("\n");
     }
 
-    double mediaTemperatura [5];
+    //Armazenar e somar temperaturas em 1 vetor
+    double mediaTemperatura [5] = {0};
     for (int i = 0; i < numBairros; i++) {
         for (int j = 0; j < numDias; j++) {
             mediaTemperatura[i] += temperatura[i][j];
         }
     }
 
+    //Calcular media das temperturas somadas
     for (int i = 0; i < numBairros; i++) {
         mediaTemperatura[i] = mediaTemperatura[i] / numDias;
     }
 
+    //imprimir a media
     printf("Bairros: Medias de temperaturas:\n");
-
     for (int i = 0; i < numBairros; i++) {
         printf("%4d ",i + 1);
         printf("   %.1f\n", mediaTemperatura[i]);
