@@ -1,6 +1,7 @@
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
+// Yuri Nunes, Pedro Victor, Flávio Lima, Davison, Victor Emanuel
 
 using namespace std;
 
